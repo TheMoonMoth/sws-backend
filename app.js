@@ -7,6 +7,8 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-app.get("/", (request, response) => {
-  
+app.get("/stories", (request, response) => {
+  response.json("Welcome.")
 })
+
+module.exports = app

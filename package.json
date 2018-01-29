@@ -1,5 +1,5 @@
 {
-  "name": "roadrate-backend",
+  "name": "sixwordstories-backend",
   "version": "0.0.1",
   "description": "Express PostgressQL Knex Backend Stack",
   "main": "index.js",

@@ -1,14 +1,13 @@
 require("dotenv").config()
 
 module.exports = {
-
   development: {
-    client: 'pg',
+    client: "pg",
     connection: "postgres://localhost/sixwordstories"
   },
 
   production: {
-    client: 'pg',
+    client: "pg",
     connection: `${process.env.DATABASE_URL}?ssl=true`
   }
-};
+}
