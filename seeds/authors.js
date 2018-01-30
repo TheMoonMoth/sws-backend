@@ -22,6 +22,14 @@ exports.seed = function(knex, Promise) {
         {
           id: 5,
           name: "Robert Benchley"
+        },
+        {
+          id: 6,
+          name: "Dave Eggers"
+        },
+        {
+          id: 7,
+          name: "Anonymous"
         }
       ])
     })

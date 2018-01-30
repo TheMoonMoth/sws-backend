@@ -24,6 +24,18 @@ exports.seed = function(knex, Promise) {
           id: 5,
           story: "Streets full of water. Please advise.",
           author_id: "5"
+        },{
+          id: 6,
+          story: "I win lottery. Sun goes nova.",
+          author_id: "3"
+        },{
+          id: 7,
+          story: "Found true love. Married someone else.",
+          author_id: "6"
+        },{
+          id: 8,
+          story: "We're older now, and older still.",
+          author_id: "7"
         }
       ])
     })
