@@ -36,6 +36,14 @@ exports.seed = function(knex, Promise) {
           id: 8,
           story: "We're older now, and older still.",
           author_id: "7"
+        },{
+          id: 9,
+          story: "Eat. Shit. Fuck. Laugh. Cry. Die.",
+          author_id: 8
+        },{
+          id: 10,
+          story: "Bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk perkodhuskurunbarggruauyagokgorlayorgromgremmitghundhurthrumathunaradidillifaititillibumullunukkunun klikkaklakkaklaskaklopatzklatschabattacreppycrottygraddaghsemmihsammihnouithappluddyappladdypkonpkot bladyughfoulmoecklenburgwhurawhorascortastrumpapornanennykocksapastippatappatupperstrippuckputtanach thingcrooklyexineverypasturesixdixlikencehimaroundhersthemaggerbykinkinkankanwithdownmindlookingated lukkedoerendunandurraskewdylooshoofermoyportertooryzooysphalnabortansporthaokansakroidverjkapakkapuk.",
+          author_id: 9
         }
       ])
     })
