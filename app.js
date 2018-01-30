@@ -34,4 +34,10 @@ app.get("/new", (request, response) => {
   response.json("new stuff will go here")
 })
 
+app.post("/new", (request, response) => {
+  queries.newStory(request.body)
+  .then(story => {response.status(201).json({message: "You did it!"})})
+  .catch(console.error)
+})
+
 module.exports = app

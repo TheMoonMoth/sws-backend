@@ -15,7 +15,7 @@ module.exports = {
         .where("id", id)
         .first()
     },
-    create(story){
+    newStory(story){
       return database("stories")
         .insert(story)
         .returning("*")
