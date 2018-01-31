@@ -51,6 +51,15 @@ app.post("/authors", (request, response) => {
     })
 })
 
+app.get("/stories/:id", (request, response) => {
+  queries
+    .read(request.params.id)
+    .then(stories => {
+      response.status(201).json({ stories })
+    })
+    .catch(console.error)
+})
+
 app.use((request, response) => {
   response.status(404)
 })
