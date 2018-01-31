@@ -4,6 +4,10 @@ exports.seed = function(knex, Promise) {
     .then(() => {
       return knex("authors").insert([
         {
+          id: 0,
+          name: "Anonymous"
+        },
+        {
           id: 1,
           name: "Ernest Hemingway"
         },
@@ -34,10 +38,10 @@ exports.seed = function(knex, Promise) {
         {
           id: 8,
           name: "Peter Nichols"
-        },{
-          id: 9,
-          name: "Danny Snelson"
         }
       ])
+    })
+    .then(() => {
+      return knex.raw("ALTER SEQUENCE authors_id_seq RESTART WITH 9;")
     })
 }

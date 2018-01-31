@@ -34,10 +34,25 @@ app.get("/new", (request, response) => {
   response.json("new stuff will go here")
 })
 
-app.post("/new", (request, response) => {
-  queries.newStory(request.body)
-  .then(story => {response.status(201).json({message: "You did it!"})})
-  .catch(console.error)
+app.post("/stories", (request, response) => {
+  queries
+    .newStory(request.body)
+    .then(story => {
+      response.status(201).json({ message: "You did it!" })
+    })
+    .catch(console.error)
+})
+
+app.post("/authors", (request, response) => {
+  queries
+    .newAuthor(request.body)
+    .then(author => {
+      response.status(201).json({message: "New author added!"})
+    })
+})
+
+app.use((request, response) => {
+  response.status(404)
 })
 
 module.exports = app

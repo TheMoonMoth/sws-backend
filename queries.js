@@ -21,6 +21,12 @@ module.exports = {
         .returning("*")
         .then(record => record[0])
     },
+    newAuthor(author){
+      return database("authors")
+        .insert(author)
+        .returning("*")
+        .then(record => record[0])
+    },
     update(id, story){
       return database("stories")
         .update(story)

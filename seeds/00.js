@@ -47,16 +47,10 @@ exports.seed = function(knex, Promise) {
           id: 9,
           story: "Eat. Shit. Fuck. Laugh. Cry. Die.",
           author_id: 8
-        },
-        {
-          id: 10,
-          story:
-            "Bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk perkodhuskurunbarggruauyagokgorlayorgromgremmitghundhurthrumathunaradidillifaititillibumullunukkunun klikkaklakkaklaskaklopatzklatschabattacreppycrottygraddaghsemmihsammihnouithappluddyappladdypkonpkot bladyughfoulmoecklenburgwhurawhorascortastrumpapornanennykocksapastippatappatupperstrippuckputtanach thingcrooklyexineverypasturesixdixlikencehimaroundhersthemaggerbykinkinkankanwithdownmindlookingated lukkedoerendunandurraskewdylooshoofermoyportertooryzooysphalnabortansporthaokansakroidverjkapakkapuk.",
-          author_id: 9
         }
       ])
     })
     .then(() => {
-      return knex.raw("ALTER SEQUENCE stories_id_seq RESTART WITH 11;")
+      return knex.raw("ALTER SEQUENCE stories_id_seq RESTART WITH 10;")
     })
 }
