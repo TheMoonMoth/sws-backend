@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.text("story")
     table.integer("author_id")
+    table.integer("rating")
   })
 }
 
