@@ -30,10 +30,6 @@ app.get("/authors", (request, response) => {
     .catch(console.error)
 })
 
-app.get("/new", (request, response) => {
-  response.json("new stuff will go here")
-})
-
 app.post("/stories", (request, response) => {
   queries
     .newStory(request.body)
