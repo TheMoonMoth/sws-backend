@@ -39,6 +39,30 @@ app.post("/stories", (request, response) => {
     .catch(console.error)
 })
 
+app.put("/voteYes/:storyId", (request, response) => {
+  console.log(request.params.storyId)
+  console.log(request.body)
+
+  queries
+    .voteYes(request.params.storyId)
+    .then(vote => {
+      response.status(201).json({message: "Yes vote tallied!"})
+    })
+    .catch(console.error)
+})
+
+app.put("/voteNo/:storyId", (request, response) => {
+  console.log(request.params.storyId)
+  console.log(request.body)
+
+  queries
+    .voteNo(request.params.storyId)
+    .then(vote => {
+      response.status(201).json({message: "No vote tallied!"})
+    })
+    .catch(console.error)
+})
+
 app.post("/authors", (request, response) => {
   queries
     .newAuthor(request.body)
@@ -54,6 +78,12 @@ app.get("/stories/:id", (request, response) => {
       response.status(201).json({ stories })
     })
     .catch(console.error)
+})
+
+app.delete("/delete/:id", (request, response) => {
+  queries
+    .delete(request.params.id)
+    .then(res => response.status(201).json({message: "This story was deleted."}))
 })
 
 app.use((request, response) => {

@@ -24,10 +24,21 @@ module.exports = {
       .returning("*")
       .then(record => record[0])
   },
-  update(id, story) {
+  voteYes(id) {
     return database("stories")
-      .update(story)
-      .where("id", id)
+      .whereIn('id', id)
+      .update({
+        'rating': database.raw('rating + 1')
+      })
+      .returning("*")
+      .then(record => record[0])
+  },
+  voteNo(id) {
+    return database("stories")
+      .whereIn('id', id)
+      .update({
+        'rating': database.raw('rating - 1')
+      })
       .returning("*")
       .then(record => record[0])
   },
