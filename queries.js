@@ -7,6 +7,9 @@ module.exports = {
   listAuthors() {
     return database("authors").select()
   },
+  listEmotions() {
+    return database("emotions").select()
+  },
   read(id) {
     return database("stories")
       .select()

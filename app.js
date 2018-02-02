@@ -30,6 +30,15 @@ app.get("/authors", (request, response) => {
     .catch(console.error)
 })
 
+app.get("/emotions", (request, response) => {
+  queries
+    .listEmotions()
+    .then(emotions => {
+      response.json({ emotions })
+    })
+    .catch(console.error)
+})
+
 app.post("/stories", (request, response) => {
   queries
     .newStory(request.body)
