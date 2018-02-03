@@ -84,6 +84,6 @@ exports.seed = function(knex, Promise) {
       ])
     })
     .then(() => {
-      return knex.raw("ALTER SEQUENCE authors_id_seq RESTART WITH 13;")
+      return knex.raw("ALTER SEQUENCE emotions_id_seq RESTART WITH 13;")
     })
 }
