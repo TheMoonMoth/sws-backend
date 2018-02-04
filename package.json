@@ -4,6 +4,7 @@
   "description": "Express PostgressQL Knex Backend Stack",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "nodemon"
   },
   "repository": {
