@@ -76,7 +76,7 @@ app.post("/authors", (request, response) => {
   queries
     .newAuthor(request.body)
     .then(author => {
-      response.status(201).json({message: "New author added!"})
+      response.status(201).json({message: "New author added!", post: author})
     })
 })
 
