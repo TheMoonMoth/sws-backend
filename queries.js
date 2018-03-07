@@ -49,5 +49,10 @@ module.exports = {
     return database("stories")
       .delete()
       .where("id", id)
+  },
+  deleteAuthor(id) {
+    return database("authors")
+      .delete()
+      .where("id", id)
   }
 }

@@ -80,6 +80,13 @@ app.post("/authors", (request, response) => {
     })
 })
 
+app.delete("/delete/author/:id", (request, response)=>{
+  queries
+    .deleteAuthor(request.params.id)
+    .then(author => response.status(201).json({message: "author deleted."}))
+    .catch(console.error)
+})
+
 app.get("/stories/:id", (request, response) => {
   queries
     .read(request.params.id)
